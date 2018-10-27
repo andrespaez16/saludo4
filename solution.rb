@@ -1,6 +1,6 @@
 require"sinatra"
 
-get "/" do
+get "/saludo" do
  unless params[:nombre]
        @nombre = "desconocido"
  else    
@@ -9,7 +9,7 @@ get "/" do
 erb :"/saludo"
 end
 
-get "/:nombre" do
+get "/saludo/:nombre" do
 @nombre = params[:nombre]
 erb :"/saludo"
 end
