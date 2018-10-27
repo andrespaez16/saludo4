@@ -1,8 +1,10 @@
 require"sinatra"
 
 get "/" do
- unless params[""]
+ unless params[:nombre]
        @nombre = "desconocido"
+ else    
+    @nombre = params[:nombre]   
     end
 erb :"/saludo"
 end
