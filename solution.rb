@@ -1,22 +1,22 @@
 require"sinatra"
 
-get "/:nombre" do
+get "/" do
 #  unless params[:nombre]
 #        @nombre = "desconocido"
 #  else    
 #     @nombre = params[:nombre]   
 #     end
 # erb :"/saludo"
-@nombre = params[:nombre]
-erb :saludo
 end
-
-# get "/:nombre" do
+# get "saludo/:nombre" do
 # @nombre = params[:nombre]
-# erb :/saludo"
+# erb :"saludo/:nombre"
 # end
-# get '/dog/:name' do
-#       p params
-#        @name =params["name"]
-#       erb :makers
-#       end
+# # @nombre = params[:nombre]
+# # erb :/saludo"
+# # end
+get '/makers/:nombre' do
+    
+       @nombre=params["nombre"]
+      erb :makers
+      end
